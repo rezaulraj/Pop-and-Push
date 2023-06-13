@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Push mathod || Pop mathod</title>
+    <style>
+      body {
+        background: linear-gradient(to right, #333, #3d5d6b);
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-transform: uppercase;
+      }
+      .container {
+        max-width: 776px;
+        margin: auto;
+        overflow: hidden;
+        text-align: center;
+        margin-top: 20%;
+      }
+      button {
+        padding: 10px 20px;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Anathing you want to Push and Pop</h1>
+    <div class="container">
+      <h2 id="res"></h2>
+      <button onclick="push()">Push</button>
+      <button onclick="pop()">Pop</button>
+    </div>
+  </body>
+  <script>
+    var items = ["orange", "blue-barry", "banana", "mango"];
+    var demo = items;
+    document.getElementById("res").innerHTML = demo;
+    function pop() {
+      demo.pop();
+      document.getElementById("res").innerHTML = demo;
+    }
+    function push() {
+      let a = prompt("Add new Item:", "");
+      demo.push(a);
+      document.getElementById("res").innerHTML = demo;
+    }
+  </script>
+</html>
