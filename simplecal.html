@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+    <style>
+      body {
+        background: linear-gradient(to right, #776767, #496e80);
+      }
+      .container {
+        max-width: 876px;
+        margin: auto;
+        align-items: center;
+        text-align: center;
+        margin-top: 20%;
+      }
+      input,
+      select,
+      button {
+        padding: 10px 20px;
+      }
+      option {
+        font-size: 20px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        background: -webkit-linear-gradient(#6cd896, #9d76db);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The Simple Calculator</h1>
+    <div class="container">
+      <input type="number" name="frist" id="frist" step="any" />
+      <select id="ope">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+      <input type="number" name="second" id="second" step="any" />
+      <br />
+      <br />
+      <button onclick="cal()">Calculate</button>
+      <br />
+      <br />
+      <input type="text" name="res" id="res" readonly="" />
+    </div>
+  </body>
+
+  <script>
+    function cal() {
+      var frist = document.getElementById("frist").value;
+      var second = document.getElementById("second").value;
+      var ope = document.getElementById("ope").value;
+      if (ope == "+") {
+        var res = parseInt(frist) + parseInt(second);
+      }
+      if (ope == "-") {
+        var res = parseInt(frist) - parseInt(second);
+      }
+      if (ope == "*") {
+        var res = parseInt(frist) * parseInt(second);
+      }
+      if (ope == "/") {
+        var res = parseInt(frist) / parseInt(second);
+      }
+      document.getElementById("res").value = res;
+    }
+  </script>
+</html>
