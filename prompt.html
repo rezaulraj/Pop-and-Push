@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User input JavaScript</title>
+    <style>
+      body {
+        background: #684f4f;
+      }
+      .container {
+        max-width: 876px;
+        margin: auto;
+        align-items: center;
+        text-align: center;
+        margin-top: 20%;
+        font-size: 30px;
+      }
+      button {
+        padding: 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      Name: <i id="result"></i>
+      <br />
+      <br />
+      <button onclick="call()">Call</button>
+    </div>
+  </body>
+  <script>
+    function call() {
+      let name = prompt("Enter the your name/anathing you want: ");
+      document.getElementById("result").innerHTML = name;
+    }
+  </script>
+</html>
